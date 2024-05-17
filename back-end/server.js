@@ -5,6 +5,7 @@ import cors from 'cors';
 //Import routes
 import weatherRouter from './routes/weather.js';
 import exchangeRouter from './routes/exchange.js';
+import crudRouter from './routes/crud.js'
 
 // Initialize Express app
 const app = express();
@@ -22,6 +23,7 @@ app.use(express.json());
 // Use routes
 app.use('/weather', weatherRouter);
 app.use('/exchange', exchangeRouter);
+app.use('/crud', crudRouter);
 
 // Start the server
 app.listen(PORT, () => {
