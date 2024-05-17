@@ -1,16 +1,18 @@
-const express = require('express');
-const app = express();
-
+import express from 'express';
+import dotenv from 'dotenv';
+import fetch from 'node-fetch';
+import cors from 'cors';
 //.env
-require('dotenv').config();
-PORT = process.env.PORT || 3000;
+dotenv.config();
+const PORT = process.env.PORT || 3000;
 
+const app = express();
+app.use(cors());
 app.use(express.json());
 
-const fetch = require("node-fetch");
 // Function to fetch weather data
 async function getWeatherData(city) {
-  const apiKey = "YOUR_API_KEY";
+  const apiKey = "ec17ac0e8b560338db4131a2b9bc63e2";
   const weatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=${apiKey}`;
   try {
     const response = await fetch(weatherURL);
@@ -21,19 +23,18 @@ async function getWeatherData(city) {
     throw error;
   }
 }
-// Example usage
-getWeatherData("Mumbai")
-  .then((data) => {
-    console.log(data); // Display the weather data for Mumbai
-  })
-  .catch((error) => {
-    console.error(error);
-  });
 
 // Action
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+app.get("/weather/:city", async (req, res) => {
+  const city = req.params.city;
+  console.log(req.params);
+  try {
+    const weatherData = await getWeatherData(city);
+      res.status(200).send(weatherData);
+  } catch (error) {
+    res.status(500).send("Error fetching weather data.");
+  }
+});
 
 app.listen(PORT, () => {
 console.log(`Running on :  http://localhost:${PORT}`);
