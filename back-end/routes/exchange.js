@@ -1,10 +1,19 @@
 import express from "express";
 import fetch from "node-fetch";
+import dotenv from "dotenv"
+
+
 const router = express.Router();
+
+// Load Environment
+dotenv.config();
+
+// Use Environment
+const API_KEY = process.env.CURRENCY_KEY;
 
 // Currency Exchange
 async function getExchange(currency) {
-  const apiKey = "34e36d2cdf90435f368b6fb1";
+  const apiKey = API_KEY;
   const fromCurrency = { value: currency }; // Example currency
   const exchangeUrl = `https://v6.exchangerate-api.com/v6/${apiKey}/latest/${fromCurrency.value}`;
 
