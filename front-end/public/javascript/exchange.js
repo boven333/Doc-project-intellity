@@ -160,6 +160,8 @@ let country_list = {
     "ZWD": "ZW"
 }
 
+// js FUNCTION
+
 const dropList = document.querySelectorAll("form select"),
     fromCurrency = document.querySelector(".from select"),
     toCurrency = document.querySelector(".to select"),

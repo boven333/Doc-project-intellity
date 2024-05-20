@@ -1,3 +1,4 @@
+//jquery
 $(document).ready(() => {
     const $container = $(".container");
     const $search = $(".search-box button");
