@@ -7,12 +7,8 @@ $(document).ready(function () {
     method: "GET",
     dataType: "json", // Specify the expected response format
     success: function (response) {
-      console.log("acf:", response);
       // Process the response and initialize DataTable
-     
-      console.log("acf get: ", response.data);
       const columns = getkeyForColumn(response.data);
-      console.log(columns);
       populateDataTable(columns, [...response.data]);
     },
     error: function (jqXHR, textStatus, errorThrown) {
@@ -37,10 +33,11 @@ $(document).ready(function () {
   } 
 
   // Function to populate DataTable
-  function populateDataTable(col,data) {
+
+  function populateDataTable(kai, kuy) { // kai(position1) = columns, kuy(position2) = data 
     let table = $("#myTable").DataTable({
-      data: data,
-      columns: col,
+      data: kuy,
+      columns: kai,
     });
   }
 });
