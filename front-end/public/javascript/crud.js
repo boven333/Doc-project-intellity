@@ -1,34 +1,46 @@
-$(document).ready(function() {
-    // URL of the API endpoint
-    const apiUrl = 'http://localhost:3015/crud/users'; // Replace with your API URL
+$(document).ready(function () {
+  // URL of the API endpoint
+  const apiUrl = "http://localhost:3015/acf"; // Replace with your API URL
+  // Perform the GET request
+  $.ajax({
+    url: apiUrl,
+    method: "GET",
+    dataType: "json", // Specify the expected response format
+    success: function (response) {
+      console.log("acf:", response);
+      // Process the response and initialize DataTable
+     
+      console.log("acf get: ", response.data);
+      const columns = getkeyForColumn(response.data);
+      console.log(columns);
+      populateDataTable(columns, [...response.data]);
+    },
+    error: function (jqXHR, textStatus, errorThrown) {
+      console.error("Error fetching acf:", textStatus, errorThrown);
+    },
+  });
 
-    // Perform the GET request
-    $.ajax({
-        url: apiUrl,
-        method: 'GET',
-        dataType: 'json', // Specify the expected response format
-        success: function(response) {
-            console.log('Users:', response);
-           // Process the response and initialize DataTable
-           populateDataTable(response);
-        },
-        error: function(jqXHR, textStatus, errorThrown) {
-            console.error('Error fetching users:', textStatus, errorThrown);
-        }
+  //Function to get keys
+  function getkeyForColumn(jsonArray){
+    let uniqKeys = [];
+    jsonArray.forEach(jsonItem => {
+        const keys = Object.keys(jsonItem);
+        uniqKeys.push(...keys);
     });
+    uniqKeys = [...new Set(uniqKeys)];
+    uniqKeys.splice(10,uniqKeys.length-10);
+    
+    return uniqKeys.reduce((acc,curr)=>{
+        acc.push({data: curr,title: String(curr).toUpperCase()});
+        return acc;
+    },[]);
+  } 
 
-    // Function to populate DataTable
-    function populateDataTable(users) {
-        let table = $('#myTable').DataTable({
-            data: users, // Use the fetched users data
-            columns: [
-                { data: 'id' },
-                { data: 'name' },
-                { data: 'email' },
-                { data: 'address.city' },
-                { data: 'phone' },
-                { data: 'company.name' }
-            ]
-        });
-    }
+  // Function to populate DataTable
+  function populateDataTable(col,data) {
+    let table = $("#myTable").DataTable({
+      data: data,
+      columns: col,
+    });
+  }
 });

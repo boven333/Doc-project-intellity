@@ -7,6 +7,8 @@ import weatherRouter from './routes/weather.js';
 import exchangeRouter from './routes/exchange.js';
 import crudRouter from './routes/crud.js';
 import pm2_5Router from './routes/pm2.5.js';
+import test from './routes/test.js';
+import acf from './routes/acf.js';
 
 // Initialize Express app
 const app = express();
@@ -26,6 +28,8 @@ app.use('/weather', weatherRouter);
 app.use('/exchange', exchangeRouter);
 app.use('/crud', crudRouter);
 app.use('/pm2_5', pm2_5Router);
+app.use('/test', test)
+app.use('/', acf);
 
 // Start the server
 app.listen(PORT, () => {
