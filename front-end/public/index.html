@@ -1,27 +1,187 @@
-<!-- Required meta tags -->
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./cssstyle.css">
+    <title>Bootstrap Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"></i>Bowen</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarOpen"
+          aria-controls="navbarOpen"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarOpen">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- /Navbar -->
 
-<!-- Bootstrap CSS -->
-<link
-  href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-  rel="stylesheet"
-  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-  crossorigin="anonymous"
-/>
+    <!-- Content -->
+    <!-- Caruosel Silde -->
+    <div id="carouselExampleCaptions" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active overflow-hidden">
+          <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" src="https://source.unsplash.com/random?1" width="800" height="600" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>First slide label</h5>
+            <p>Some representative placeholder content for the first slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item overflow-hidden">
+          <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" src="https://source.unsplash.com/random?2" width="800" height="600" role="img" aria-label="Placeholder: Second slide" preserveAspectRatio="xMidYMid slice" focusable="false">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Second slide label</h5>
+            <p>Some representative placeholder content for the second slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item overflow-hidden">
+          <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" src="https://source.unsplash.com/random?3" width="800" height="600" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Third slide label</h5>
+            <p>Some representative placeholder content for the third slide.</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <hr class="featurette-divider" />
+    <!-- Card -->
+    <div class="headCard">
+      <h1>Menu</h1>
+    </div>
+    <div class="card-content">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title"> Weather Map <i class="bi bi-cloud-fill" style="font-size: 2rem;"></i></h5>
+          <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="card-link">Example</a>
+          <a href="#" class="card-link">Get code</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Exchange Currency <i class="bi bi-cash-coin" style="font-size: 2rem;"></i></h5>
+          <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="card-link">Example</a>
+          <a href="#" class="card-link">Get code</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">PM 2.5 Map <i class="bi bi-exclamation-triangle-fill" style="font-size: 2rem;"></i></h5>
+          <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="card-link">Example</a>
+          <a href="#" class="card-link">Get code</a>
+        </div>
+      </div>
 
-<h1>Hello, world!</h1>
-
-
-<!-- Option 1: Bootstrap Bundle with Popper -->
-<script
-  src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-  crossorigin="anonymous"
-></script>
-
-<!-- Option 2: Separate Popper and Bootstrap JS -->
-<!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    -->
+    </div>
+    <hr class="featurette-divider" />
+    <!-- my self -->
+    <div class="carou">
+      <div class="HeadTitle">
+        <h1>Welcome</h1>
+      </div>
+      <div class="row featurette">
+        <div class="widget col-md-7">
+          <h2 class="featurette-heading fw-normal lh-1">First featurette heading. <span class="text-body-white">It’ll blow your mind.</span></h2>
+          <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
+        </div>
+        <div class="widget-img col-md-5">
+          <img 
+          class="img-design bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" 
+          src="https://source.unsplash.com/random/500x500" 
+          width="500" height="500" 
+          role="img" 
+          aria-label="Random image from Unsplash" />
+        </div>
+      </div>
+    </div>
+    <hr class="featurette-divider" />
+    <div class="carou">
+      <div class="HeadTitle">
+        <h1>To Know me</h1>
+      </div>
+      <div class="row featurette">
+        <div class="widget col-md-7 order-md-2">
+          <h2 class="featurette-heading fw-normal lh-1">Oh yeah, it’s that good. <span class="text-body-white">See for yourself.</span></h2>
+          <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+        </div>
+        <div class="widget-img col-md-5 order-md-1">
+          <img 
+          class="img-design bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" 
+          src="https://source.unsplash.com/random/500x500" 
+          width="500" height="500" 
+          role="img" 
+          aria-label="Random image from Unsplash" />
+        </div>
+      </div>
+    </div>
+    <!-- /Content -->
+    <hr class="featurette-divider" />
+    <!-- Footer -->
+    <footer class="footer py-3 my-4">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item"><a href="#" class="nav-link px-2">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2">Features</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2">Pricing</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2">FAQs</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2">About</a></li>
+      </ul>
+      <p class="text-footer text-center">© 2024 Company, Inc</p>
+    </footer>
+        <!-- /Footer -->
+         
+  </body>
+</html>

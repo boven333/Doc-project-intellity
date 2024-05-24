@@ -2,18 +2,185 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: none;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-  }
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
 
-  body {
-    height: 100vh;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #e1e5e8;
+  text-align: center !important;
+  background-color: #CDE8E5 !important;
+}
+
+.container {
+  background-color: #7AB2B2;
+  max-width: 100% !important;
+  margin-top: -10px;
+  padding: 1rem 0 1rem 0;
+}
+
+/* Navbar */
+.navbar-light .navbar-brand {
+  color: #EEF7FF !important;
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-item .nav-link {
+  color: #EEF7FF !important;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  color: #4D869C !important;
+  transition: color 0.3s ease;
+}
+
+.navbar-toggler {
+  color: #4D869C !important;
+  background-color: #4D869C !important;
+  outline: none !important;
+  font-size: 18px;
+  line-height: 0.3;
+  padding: 1px 5px;
+}
+
+.navbar-toggler:focus {
+  text-decoration: none;
+  outline: 0;
+  box-shadow: 0 0 0 0 !important;
+}
+
+.navbar-nav {
+  text-align: center;
+}
+
+.nav-link {
+  padding: 5px;
+}
+/* Navbar */
+
+/* Card index */
+.content-box {
+  margin-top: 6rem;
+  padding: 10px;
+}
+
+.btn {
+  background-color: #7AB2B2 !important;
+  transition: color 0.3s ease;
+}
+.btn:hover {
+  background-color: #4D869C !important;
+  transition: color 0.3s ease;
+}
+
+.card {
+  background-color: #EEF7FF !important;
+  border-radius: 16px !important;
+  width: 20rem !important;
+}
+
+.card-body {
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.card > .card-body > a {
+  color: #CDE8E5;
+}
+.card > .card-body > a > button {
+  color: #CDE8E5;
+}
+
+.content-card {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.widget > :first-child {
+  background-color: #7AB2B2 !important; 
+  border-radius: 16px !important;
+}
+.widget > :first-child > :last-child > h1  {
+  color: #EEF7FF;
+}
+.widget > :first-child > :last-child > p  {
+  color: #EEF7FF;
+}
+
+/* index */
+
+/* WeatherMap  */
+.content-weather {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* WeatherMap  */
+
+/* datatable */
+#myTable{
+  background-color: #ff7f3e;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #8eabbd;
+    flex-direction: column;
+    width: 100%;
+    border-collapse: collapse;
+
+
+}
+
+.content-table{
+  justify-content: center;
+  align-items: center;
+  margin-top: 6rem;
+  background-color: #e1e5e8;
+}
+/* datatable */
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .content-card {
+    margin: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
+}
+
+/* Large devices (desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .content-card {
+    margin: 0 0 0 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+}
+
+/* Large devices (desktops, 1200px and up) */
+@media (min-width: 1600px) {
+  .content-card {
+    margin: 0 0 0 5.3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+  }
+}
