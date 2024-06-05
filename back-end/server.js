@@ -28,7 +28,9 @@ app.use('/weather', weatherRouter);
 app.use('/exchange', exchangeRouter);
 app.use('/crud', crudRouter);
 app.use('/pm2_5', pm2_5Router);
-app.use('/test', test)
+
+app.use('/', test)
+
 app.use('/', acf);
 
 // Start the server
